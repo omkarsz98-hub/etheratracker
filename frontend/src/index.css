@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-800 font-sans antialiased;
+    font-size: 15px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-ink-200 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-ink-300;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-accent-600 text-white font-medium text-sm transition-all duration-150 hover:bg-accent-700 active:scale-95 shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-ink-100 text-ink-700 font-medium text-sm transition-all duration-150 hover:bg-ink-50 hover:border-ink-200 active:scale-95 shadow-sm;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-3 py-2 rounded-lg text-ink-500 font-medium text-sm transition-all duration-150 hover:bg-ink-100 hover:text-ink-800 active:scale-95;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-rose-500 text-white font-medium text-sm transition-all duration-150 hover:bg-rose-600 active:scale-95 shadow-sm;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-ink-100 shadow-card;
+  }
+
+  .input {
+    @apply w-full px-3.5 py-2.5 rounded-xl border border-ink-200 bg-white text-ink-800 placeholder-ink-300 text-sm transition-all duration-150 focus:outline-none focus:border-accent-400 focus:shadow-glow;
+  }
+
+  .label {
+    @apply block text-xs font-medium text-ink-500 mb-1.5 uppercase tracking-wide;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-ink-400 transition-all duration-150 hover:text-ink-800 hover:bg-ink-100 cursor-pointer;
+  }
+
+  .sidebar-link.active {
+    @apply bg-accent-50 text-accent-700;
+  }
+
+  .kanban-col {
+    @apply flex-1 min-w-0 flex flex-col gap-3 p-4 rounded-2xl bg-ink-50 border border-ink-100 min-h-[200px];
+  }
+
+  .task-card {
+    @apply bg-white rounded-xl border border-ink-100 shadow-card p-4 cursor-pointer transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+
+  .task-card.overdue {
+    @apply border-rose-300 bg-rose-50;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.25s ease-out;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-12px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+}
