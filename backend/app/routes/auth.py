@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException
-from schemas.schemas import SignupRequest, LoginRequest
-from utils.auth import hash_password, verify_password, create_token
-from utils.helpers import serialize, log_activity
-from database import users_col
+from app.schemas.schemas import SignupRequest, LoginRequest
+from app.utils.auth import hash_password, verify_password, create_token
+from app.utils.helpers import serialize, log_activity
+from app.database import users_col
 from bson import ObjectId
 from datetime import datetime
 

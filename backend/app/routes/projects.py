@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
-from schemas.schemas import ProjectCreate, ProjectUpdate
-from utils.auth import get_current_user, require_admin
-from utils.helpers import serialize, serialize_list, log_activity
-from database import projects_col, users_col, tasks_col
+from app.schemas.schemas import ProjectCreate, ProjectUpdate
+from app.utils.auth import get_current_user, require_admin
+from app.utils.helpers import serialize, serialize_list, log_activity
+from app.database import projects_col, users_col, tasks_col
 from bson import ObjectId
 from datetime import datetime
 

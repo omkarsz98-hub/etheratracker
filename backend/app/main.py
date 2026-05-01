@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routes import auth, projects, tasks, users
+from app.routes import auth, projects, tasks, users
 import os
 
 app = FastAPI(title="Team Task Manager", version="1.0.0")

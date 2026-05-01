@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
-from utils.auth import get_current_user
-from utils.helpers import serialize_list, get_logs
-from database import users_col
+from app.utils.auth import get_current_user
+from app.utils.helpers import serialize_list, get_logs
+from app.database import users_col
 
 router = APIRouter()
 

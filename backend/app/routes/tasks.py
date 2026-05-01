@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
-from schemas.schemas import TaskCreate, TaskUpdate
-from utils.auth import get_current_user, require_admin
-from utils.helpers import serialize, serialize_list, log_activity
-from database import tasks_col, users_col, projects_col
+from app.schemas.schemas import TaskCreate, TaskUpdate
+from app.utils.auth import get_current_user, require_admin
+from app.utils.helpers import serialize, serialize_list, log_activity
+from app.database import tasks_col, users_col, projects_col
 from bson import ObjectId
 from datetime import datetime, date
 import uuid

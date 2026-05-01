@@ -1,6 +1,6 @@
 from bson import ObjectId
 from datetime import datetime
-from database import logs_col
+from app.database import logs_col
 
 
 def serialize(doc) -> dict:
